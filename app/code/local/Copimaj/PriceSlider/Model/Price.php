@@ -187,11 +187,16 @@ class Copimaj_PriceSlider_Model_Price extends Mage_Catalog_Model_Layer_Filter_Ab
     protected function _renderItemLabel($range, $value)
     {
         $store      = Mage::app()->getStore();
-        $fromPrice  = $store->formatPrice(($value - 1) * $range);
+        $fromPrice  = $store->formatPrice(($value-1)*$range);
         $toPrice    = $store->formatPrice($value*$range);
+        
+        if($CustomRange)
+            return Mage::helper('catalog')->__('%s - %s', $store->formatPrice($From),$store->formatPrice($To));
+        else
+            return Mage::helper('catalog')->__('%s - %s', $fromPrice, $toPrice);
 
-        return Mage::helper('catalog')->__('%s - %s', $fromPrice, $toPrice);
     }
+
 
     /**
      * Prepare text of range label

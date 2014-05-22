@@ -9,7 +9,7 @@
 		<models>
 			<catalog>
 				<rewrite>
-					<layer_filter>Copimaj_PriceSlider_Model_Price</layer_filter>
+					<layer_filter_price>Copimaj_PriceSlider_Model_Price</layer_filter_price>
 				</rewrite>
 			</catalog>
 		</models>
