@@ -10,8 +10,16 @@
 			<catalog>
 				<rewrite>
 					<layer_filter_price>Copimaj_PriceSlider_Model_Price</layer_filter_price>
+					<layer_filter_item>Copimaj_PriceSlider_Model_Item</layer_filter_item>
 				</rewrite>
 			</catalog>
 		</models>
+		<blocks>
+			<catalog>
+				<rewrite>
+					<layer_state>Copimaj_PriceSlider_Block_State</layer_state>
+				</rewrite>
+			</catalog>
+		</blocks>
 	</global>
 </config>
